@@ -1,0 +1,115 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-color: #f9f7f5;
+}
+
+.background-img{
+    background-image: url(image/383512345_1722668393.jpg);
+    height: 50vh;
+    background-size: cover;
+}
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 20px auto;
+}
+.card-list .card-item {
+    background: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+* {
+    box-sizing: border-box;
+  }
+.corv1 {
+    float: left;
+    width: 33%;
+    padding: 10px 10px;
+}
+  
+.row {margin: 0 -5px;}
+.radius{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.radius:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .grid-container{
+    
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+  }
+  .grid-item{
+    text-decoration: none;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .corv1 {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .itom {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+<style>
+body {margin:0;font-family:Arial}
+
+.topnav {
+    padding-left: 4%;
+  overflow: hidden;
+  background-color: #002147;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #ec2025;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ec2025;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 998px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav{
+    padding-right: 5%;
+  }
+  
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 998px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+.button {
+  border: none;
+  color: white;
+  background-color: #002147;
+  padding: 10px 32px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+}
+.button1 {
+  border: none;
+  color: white;
+  background-color: #ec2025;
+  padding: 10px 32px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px 10px;
+}
+
+.row {margin: 0 -5px;}
+.row{
+  margin-left: 6%;
+  margin-right: 7%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 990px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    
+  }
+}
+@media screen and (max-width: 765px) {
+  .row .column img{
+    display: none;
+  }
+  .card{
+    padding-left: 20px;;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* padding: 16px; */
+  background-color: #ffffff;
+}
+
+.column1 {
+  float: left;
+  width: 33%;
+  padding: 10px 10px;
+}
+
+.row1 {margin: 0 -5px;}
+.row1{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .column1 {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+    
+  }
+}
+@media screen and (max-width: 700px) {
+  .column1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    
+  }
+}
+@media screen and (max-width: 765px) {
+  
+  .card1{
+    padding-left: 20px;;
+  }
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* padding: 16px; */
+  background-color: #ffffff;
+}
+.grid-item a{
+  text-decoration: none;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="img-2" style="padding-top: 1%; padding-bottom: 1%; background-color: white;">
+        <img src="image/general_settings_1639053735_1412244780.jpg" style="width: 10%; padding-left: 4%; " alt="">
+    </div>
+
+<div class="topnav" id="myTopnav">
+    <a href="#news">Home</a>
+  <a href="#contact">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Services 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Online Training</a>
+      <a href="#">Classroom Training</a>
+      <a href="#">Corporate Training</a>
+    </div>
+  </div>
+  <a href="#about">Courses Offering</a>
+  <div class="dropdown">
+    <button class="dropbtn">Training Schedules 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Online Training</a>
+      <a href="#">Classroom Training</a>
+      <a href="#">Weekend Workshops</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Careers 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Placements</a>
+      <a href="#">Internship</a>
+      <a href="#">Interview Questions</a>
+    </div>
+  </div>
+
+
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact Us</a>
+
+                                                                                                                                                                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+
+                                                                                                                                                                                                                                                        <script>
+                                                                                                                                                                                                                                                        function myFunction() {
+                                                                                                                                                                                                                                                        var x = document.getElementById("myTopnav");
+                                                                                                                                                                                                                                                        if (x.className === "topnav") {
+                                                                                                                                                                                                                                                            x.className += " responsive";
+                                                                                                                                                                                                                                                        } else {
+                                                                                                                                                                                                                                                            x.className = "topnav";
+                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                        </script>
+
+<div class="background-img">
+    <img src="" alt="" style="width: auto;">
+</div>
+<h1 style="text-align: center; margin-top: 2%;">Explore Our Courses</h1>
+<div class="card-list">
+  <a href="#" class="card-item" style="margin-top: 10%;">
+      <img src="image/img.jpeg" alt="Card Image">
+      <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+      <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>15000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>18000</span>
+        <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i></span></p>
+        <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+        <button class="button1" type="button">Click Me!</button>
+      
+      
+  </a>
+  <a href="#" class="card-item" style="margin-top: 10%;">
+      <img src="image/img2.jpeg" alt="Card Image">
+      <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+      <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>8000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>9000</span>
+        <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i></span></p>
+        <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+        <button class="button1" type="button">Click Me!</button>
+      
+      
+  </a>
+  <a href="#" class="card-item" style="margin-top: 10%;">
+      <img src="image/img3.jpeg" alt="Card Image">
+      <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+      <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>8000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>9000</span>
+        <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i></span></p>
+        <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+        <button class="button1" type="button">Click Me!</button>
+
+      
+  </a>
+  <a href="#" class="card-item" style="margin-top: 10%;">
+    <img src="image/img4.jpg" alt="Card Image">
+    <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+    <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>9000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>11000</span>
+      <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i></span></p>
+      <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+      <button class="button1" type="button">Click Me!</button>
+    
+    
+</a>
+<a href="#" class="card-item" style="margin-top: 10%;">
+    <img src="image/img5.jpeg" alt="Card Image">
+    <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+    <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>30,000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>35,000</span>
+      <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i></span></p>
+      <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+      <button class="button1" type="button">Click Me!</button>
+    
+    
+</a>
+<a href="#" class="card-item" style="margin-top: 10%;">
+    <img src="image/img6.png" alt="Card Image">
+    <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+    <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>16000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>18000</span>
+      <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i></span></p>
+      <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+      <button class="button1" type="button">Click Me!</button>
+
+    
+</a>
+<a href="#" class="card-item" style="margin-top: 10%;">
+  <img src="image/img7.png" alt="Card Image">
+  <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+  <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>10000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>12000</span>
+    <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i></span></p>
+    <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+    <button class="button1" type="button">Click Me!</button>
+  
+  
+</a>
+<a href="#" class="card-item" style="margin-top: 10%;">
+  <img src="image/img8.jpg" alt="Card Image">
+  <p style="margin-left: 20px; color: black; margin-top: 5px;">Duration: 3 Months</p>
+  <p style="margin-left: 20px; color: black; margin-top: 5px;"><span style="margin-right: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>16000</span> <span style="text-decoration: line-through; margin-left: 5px;"><i class="fa-solid fa-indian-rupee-sign" style="font-size: 15px;"></i>18000</span>
+    <span style="font-size: 12px; color: #ff9900;padding-left: 50px;">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i></span></p>
+    <button style="margin-left: 20px;" class="button" type="button">Click Me!</button>
+    <button class="button1" type="button">Click Me!</button>
+
+  
+</a>
+</div>
+
+<div style="text-align: center; margin-top: 15vh; margin-bottom: 6vh;">
+<h1>The Bright Place to Build The Best Career Value</h1>
+<p style="margin-top: 10px;">Best Opportunity To Learn From Currently Working Professionals</p>
+</div>
+
+<div class="row1">
+  <div class="column1" >
+    <img src="image/icon.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 10%; margin: 4vh 11%;">
+    <div class="card1" style="height: 16vh; border-radius: 25px; background-color: #35cc57;">
+      
+      <p style=" margin: 5vh; color: white;">Online Training</p>      
+    </div>
+  </div>
+
+  <div class="column1">
+    <img src="image/icon1.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 10%; margin: 4vh 11%;">
+    <div class="card1" style="height: 16vh; border-radius: 25px; background-color: #4589c1;">
+      <p style=" margin: 5vh; color: white;">Classroom Training</p>
+      
+    </div>
+  </div>
+  
+  <div class="column1">
+    <img src="image/icon2.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 10%; margin: 4vh 11%;">
+    <div class="card1" style="height: 16vh; border-radius: 25px; background-color: #fd7e14;">
+      <p style=" margin: 5vh; color: white;">Corporate Training</p>
+      
+    </div>
+  </div>
+
+  <div class="column1">
+    <img src="image/icon3.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 10%; margin: 4vh 11%;">
+    <div class="card1" style="height: 16vh; border-radius: 25px; background-color: #8864c3;">
+      <p style=" margin: 5vh; color: white;">Weekend Workshops</p>
+      
+    </div>
+  </div>
+  
+  <div class="column1">
+    <img src="image/icon4.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 10%; margin: 4vh 11%;">
+    <div class="card1" style="height: 16vh; border-radius: 25px; background-color: #e25118;">
+      <p style=" margin: 5vh; color: white;">Placement</p>
+      
+    </div>
+  </div>
+  
+  <div class="column1">
+    <img src="image/icon5.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 10%; margin: 4vh 11%;">
+    <div class="card1" style="height: 16vh; border-radius: 25px; background-color: #27ab9b;">
+      <p style=" margin: 5vh; color: white;">Internships</p>
+    </div>
+  </div>
+</div>
+
+
+<h1 style="text-align: center; margin-top: 40px; margin-bottom: 30px;">Training Features</h1>
+
+<div class="row" style="padding-bottom: 10vh;">
+  <div class="column" >
+    <img src="image/training1.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 35vh; width: 33%;">
+    <div class="card" style="height: 35vh;">
+      
+      <h3>In-time Course Completion</h3>
+      <p style="margin-top: 3%;">Our courses are strategically and innovatively designed, blending both theoretical and practical teaching methods. The modules are carefully chosen to ensure the course is as industry-relevant as possible. The courses are concise yet start their careers at the earliest possible.</p>
+      
+    </div>
+  </div>
+
+  <div class="column">
+    <img src="image/training2.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 35vh; width: 33%;">
+    <div class="card" style="height: 35vh;">
+      <h3>State-of-the-art Infrastructure</h3>
+      <p style="margin-top: 3%;">At Ashok IT Students study in a learning environment supported by state-of-the-art infrastructure, new and innovative teaching techniques, and high-end technological educational resources.</p>
+      
+    </div>
+  </div>
+  
+  <div class="column">
+    <img src="image/training3.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 35vh; width: 33%;">
+    <div class="card" style="height: 35vh;">
+      <h3>Blended Training Approach</h3>
+      <p style="margin-top: 3%;">
+        We adopt an integrated approach to training that helps our students get both the IT knowledge and skills required to handle the challenging corporate responsibilities. Theoretical learning at Ashok IT is adequately complementedstudents to learn in an industry-specific way.</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <img src="image/training4.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 35vh; width: 33%;">
+    <div class="card" style="height: 35vh;">
+      <h3>Free Demo Sessions</h3>
+      <p style="margin-top: 3%;">We also provide our prospective students with the option to try the various programs and courses that we offer through our free demo service. Using this service students can test the course quality and get a better understanding of what course they want to study.</p>
+    </div>
+  </div>
+</div>
+
+<h1 style="padding-top: 5vh; text-align: center; margin-bottom: 2vh;">What Our Students Say</h1>
+<div class="clints" style="background-color: #ffffff; margin-left: 7%; margin-right: 7%;">
+  <div class="column1" >
+    <img src="image/icon-img.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 12%; margin: 4vh 11%;">
+    <div class="card1" style="height: 57vh; border-radius: 5px; background-color: #f9f7f5;">
+      <h3 style=" margin: 5vh;">Avinish <p style="opacity: 0.5; font-size: 10px;">CSE Student</p></h3>
+      <p style="margin-top: 10px; margin-left: 5%; margin-right: 5%;">"I am a full-time employee aat an IT solutions <br> <br> company. I took multiple online IT training <br> <br>  courses. The course material was thorough <br> <br>  and impressive. the teachers aree also very <br> <br>  supportiv. i was easily able to update my <br> <br>  skills concurrently with my job. thank you...</p>
+    </div>
+  </div>
+
+  <div class="column1">
+    <img src="image/icon-img.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 12%; margin: 4vh 11%;">
+    <div class="card1" style="height: 57vh; border-radius: 5px; background-color: #f9f7f5;">
+      <h3 style=" margin: 5vh;">Avinish <p style="opacity: 0.5; font-size: 10px;">CSE Student</p></h3>
+      <p style="margin-top: 10px; margin-left: 5%; margin-right: 5%;">"I am a full-time employee aat an IT solutions <br> <br> company. I took multiple online IT training <br> <br>  courses. The course material was thorough <br> <br>  and impressive. the teachers aree also very <br> <br>  supportiv. i was easily able to update my <br> <br>  skills concurrently with my job. thank you...</p>
+    </div>
+    
+  </div>
+  
+  <div class="column1" style="margin-bottom: 10vh;">
+    <img src="image/icon-img2.png" alt="" style="float: left; object-fit: fill; margin-right: 20px; height: 8vh; width: 12%; margin: 4vh 11%;">
+    <div class="card1" style="height: 57vh; border-radius: 5px; background-color: #f9f7f5;">
+      <h3 style=" margin: 5vh;">Avinish <p style="opacity: 0.5; font-size: 10px;">CSE Student</p></h3>
+      <p style="margin-top: 10px; margin-left: 5%; margin-right: 5%;">"I am a full-time employee aat an IT solutions <br> <br> company. I took multiple online IT training <br> <br>  courses. The course material was thorough <br> <br>  and impressive. the teachers aree also very <br> <br>  supportiv. i was easily able to update my <br> <br>  skills concurrently with my job. thank you...</p>
+    </div>
+  </div>
+</div>
+<section class="footer" style="float: left; background-color: #002147; padding-left: 7%; padding-right: 7%; padding-bottom: 3%; padding-top: 3%;">
+  <div class="grid-container">
+    <div class="grid-item"  style="padding-right: 20px; color: white;">
+      <img src="image/general_settings_1639053735_1412244780.jpg" alt="" style="height: 7vh;"> <br> <br>
+      Ashok IT is a leading Indian IT <br><br> training institute preparing tech- <br><br> aspirants for flourishing careers in this <br><br> challenging and competitive domain <br><br> since 2020.</div>
+    <div class="grid-item" style="text-decoration: none; color: white; padding-right: 20px;">
+      <h3 style="color: #ec2025;">QUICK LINKS</h3><br>
+      <a href="#">About us</a> <br><br>
+      <a href="#">Online Batches</a> <br><br>
+      <a href="#">Classroom Batches</a><br><br>
+      <a href="#">Weekend Workshops</a><br><br>
+      <a href="#">Contact us</a>
+    </div> 
+    <div class="grid-item" style="text-decoration: none; color: white; padding-right: 20px;">
+      <h3 style="color: #ec2025;">  OUR SERVICES</h3><br>
+      <a href="#">Online Training</a> <br><br>
+      <a href="#">Classroom Training</a> <br><br>
+      <a href="#">Corporate Training</a><br><br>
+      <a href="#">Placements</a><br><br>
+      <a href="#">Internship</a><br><br>
+    </div>
+    <div class="grid-item" style="text-decoration: none; color: white; padding-right: 20px;">
+      <h3 style="color: #ec2025;">Legal</h3><br>
+      <a href="#"> Terms of use & Privacy Policy</a> <br><br>
+    </div>
+    <div class="grid-item" style="text-decoration: none; color: white; padding-right: 20px;">
+      <h3 style="color: #ec2025;">Contact Us</h3><br>
+      <a href="#">+91 9985396677</a> 
+      <a href="#">info@ashokitech.com</a> <br><br>
+      <a href="#">H.No - 7-1-413/2, Beside Sonabhai Temple, Ameerpet, Hyderabad - 500016
+        Click Here To Join Our Whatsapp Group For Latest Updates</a><br><br> 
+ 
+    </div>
+  </div>
+  <hr>
+
+  <div style="padding-top: 4%;">
+    <p style="text-align: center; color: white;">© 2024 SERAJ KHAN. All Rights Reserved.</p>
+  </div>
+
+</section>
+
+</body>
+</html>
